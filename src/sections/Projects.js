@@ -1,5 +1,8 @@
 import React from "react"
 import styled from "styled-components"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
 
 // Images
 import VillainCuts from "../images/projects/villain-cuts.jpg"
@@ -14,15 +17,15 @@ const Wrapper = styled.section`
 `
 
 const GridWrapper = styled.div`
-  width: 100%;
+  width: 80%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 1rem;
+  grid-gap: 3rem;
   position: relative;
-  width: 100%;
   justify-items: center;
+  justify-content: space-evenly;
   align-items: center;
-  margin: 2rem 0;
+  margin: 2rem;
 `
 
 const Title = styled.h1`
@@ -31,6 +34,10 @@ const Title = styled.h1`
   font-size: 5rem;
   text-align: center;
   color: #333;
+
+  @media (max-width: 500px) {
+    font-size: 3.5rem;
+  }
 `
 const Heading = styled.h2`
   font-family: "Montserrat", sans-serif;
@@ -38,6 +45,10 @@ const Heading = styled.h2`
   font-size: 2rem;
   text-align: center;
   width: 100%;
+
+  @media (max-width: 500px) {
+    font-size: 1.5rem;
+  }
 `
 const Span = styled.span`
   font-weight: 600;
@@ -49,7 +60,7 @@ const ProjectCard = styled.div`
   overflow: hidden;
   border-radius: 20px;
   box-shadow: -5px 13px 35px -9px rgba(130, 130, 130, 0.5);
-  min-height: 53vh;
+  min-height: 40vh;
   display: flex;
   flex-direction: column;
   border: 1px solid rgba(191, 191, 191, 0.5);
@@ -147,8 +158,20 @@ const Projects = () => {
             <Skill>MaterialUI</Skill>
           </SkillWrapper>
           <LinkWrapper>
-            <ProjectLink>Demo</ProjectLink>
-            <ProjectLink>Source Code</ProjectLink>
+            <ProjectLink>
+              <FontAwesomeIcon
+                icon={faExternalLinkAlt}
+                style={{ marginRight: "0.5rem" }}
+              />
+              Demo
+            </ProjectLink>
+            <ProjectLink>
+              <FontAwesomeIcon
+                icon={faGithub}
+                style={{ marginRight: "0.5rem" }}
+              />
+              Source Code
+            </ProjectLink>
           </LinkWrapper>
           <ProjectDescription>
             A website for a small business built with React where users can
@@ -165,7 +188,13 @@ const Projects = () => {
             <Skill>Swift</Skill>
           </SkillWrapper>
           <LinkWrapper>
-            <ProjectLink>Source Code</ProjectLink>
+            <ProjectLink>
+              <FontAwesomeIcon
+                icon={faGithub}
+                style={{ marginRight: "0.5rem" }}
+              />
+              Source Code
+            </ProjectLink>
           </LinkWrapper>
           <ProjectDescription>
             An iOS application built using Swift as part of an iOS course by
@@ -182,7 +211,13 @@ const Projects = () => {
             <Skill>Swift</Skill>
           </SkillWrapper>
           <LinkWrapper>
-            <ProjectLink>Source Code</ProjectLink>
+            <ProjectLink>
+              <FontAwesomeIcon
+                icon={faGithub}
+                style={{ marginRight: "0.5rem" }}
+              />
+              Source Code
+            </ProjectLink>
           </LinkWrapper>
           <ProjectDescription>
             An iOS game built using Swift. Users press a button as many times as
@@ -198,7 +233,13 @@ const Projects = () => {
             <Skill>Swift</Skill>
           </SkillWrapper>
           <LinkWrapper>
-            <ProjectLink>Source Code</ProjectLink>
+            <ProjectLink>
+              <FontAwesomeIcon
+                icon={faGithub}
+                style={{ marginRight: "0.5rem" }}
+              />
+              Source Code
+            </ProjectLink>
           </LinkWrapper>
           <ProjectDescription>
             An iOS application built for medical professionals to log incidents

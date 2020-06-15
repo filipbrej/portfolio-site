@@ -1,5 +1,7 @@
 import React from "react"
 import styled from "styled-components"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons"
 
 const Title = styled.h1`
   font-family: "Montserrat", sans-serif;
@@ -7,6 +9,10 @@ const Title = styled.h1`
   font-size: 5rem;
   text-align: center;
   color: #333;
+
+  @media (max-width: 500px) {
+    font-size: 3.5rem;
+  }
 `
 
 const Heading = styled.h2`
@@ -15,6 +21,10 @@ const Heading = styled.h2`
   font-size: 2rem;
   text-align: center;
   width: 100%;
+
+  @media (max-width: 500px) {
+    font-size: 1.5rem;
+  }
 `
 
 const Span = styled.span`
@@ -25,7 +35,6 @@ const Span = styled.span`
 const Form = styled.form`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   border-radius: 10px;
   margin: 2rem auto;
@@ -41,6 +50,24 @@ const Form = styled.form`
     width: 70%;
   }
 `
+
+const FormGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+`
+
+const Label = styled.label`
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  margin-left: 1.8rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.3s;
+  transform: translateY(0rem);
+  color: #333;
+`
+
 const Input = styled.input`
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -51,12 +78,18 @@ const Input = styled.input`
   resize: none;
   margin: 2rem 1rem 0 1rem;
   color: #333;
-  background-color: lightgray;
+  background-color: rgb(223, 223, 223);
   border-radius: 10px;
+  display: block;
+  transition: all 0.3s;
+
+  :placeholder-shown + ${Label} {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-3rem);
+  }
 `
-const Label = styled.label`
-  font-family: "Montserrat", sans-serif;
-`
+
 const MessageBox = styled.textarea`
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -66,11 +99,24 @@ const MessageBox = styled.textarea`
   border: none;
   resize: none;
   color: #333;
-  background-color: lightgray;
-  margin: 2rem 1rem 1.5rem 1rem;
+  background-color: rgb(223, 223, 223);
+  margin: 2rem 0rem 1rem 0rem;
   border-radius: 10px;
   height: 200px;
-  width: 80%;
+  display: block;
+
+  :placeholder-shown + ${Label} {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-3rem);
+  }
+`
+
+const Reminder = styled.p`
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  color: #333;
+  margin-left: 1rem;
 `
 
 const SubmitButton = styled.button`
@@ -91,7 +137,7 @@ const SubmitButton = styled.button`
   cursor: pointer;
   border: none;
   outline: none;
-  margin-bottom: 1.3rem;
+  margin: 1.3rem 0;
 
   :hover {
     transform: translateY(-3px);
@@ -106,12 +152,29 @@ const Contact = () => {
       <Heading>
         Let's work <Span>together</Span>.
       </Heading>
-
       <Form>
-        <Input placeholder="Full Name"></Input>
-        <Input placeholder="Email Address"></Input>
-        <MessageBox></MessageBox>
-        <SubmitButton>Submit</SubmitButton>
+        <FormGroup>
+          <Input required type="text" placeholder="Full Name*"></Input>
+          <Label for="name">Full Name*</Label>
+        </FormGroup>
+        <FormGroup>
+          <Input required type="email" placeholder="Email Address*"></Input>
+          <Label for="email">Email Address*</Label>
+        </FormGroup>
+        <FormGroup>
+          <MessageBox
+            required
+            placeholder="Enter your message here*"
+          ></MessageBox>
+          <Reminder>*required field</Reminder>
+        </FormGroup>
+        <SubmitButton type="submit">
+          <FontAwesomeIcon
+            icon={faPaperPlane}
+            style={{ marginRight: "0.5rem" }}
+          />
+          Submit
+        </SubmitButton>
       </Form>
     </>
   )

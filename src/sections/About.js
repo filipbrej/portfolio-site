@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import AboutDrawing from "../images/about.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faPaperPlane, faFolderOpen } from "@fortawesome/free-solid-svg-icons"
+import { faFileWord, faFolderOpen } from "@fortawesome/free-solid-svg-icons"
 
 const Wrapper = styled.section`
   width: 100%;
@@ -43,12 +43,16 @@ const Title = styled.h1`
   }
 `
 
-const BodyHeading = styled.h2`
+const Heading = styled.h2`
   font-family: "Montserrat", sans-serif;
   color: #333;
   margin-bottom: 1rem;
   font-weight: 400;
   font-size: 2rem;
+
+  @media (max-width: 500px) {
+    font-size: 1.6rem;
+  }
 `
 
 const BodyText = styled.p`
@@ -104,10 +108,7 @@ const Skill = styled.h4`
   font-family: "Montserrat", sans-serif;
   margin-right: 0.5rem;
   font-weight: 600;
-
-  @media (max-width: 500px) {
-    font-size: 0.8rem;
-  }
+  font-size: 0.9rem;
 `
 
 const SkillType = styled(Skill)`
@@ -118,18 +119,19 @@ const SkillType = styled(Skill)`
 
 const SkillWrapper = styled(BodyLinkWrapper)`
   margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
 `
 
 const About = () => {
   return (
     <>
       <Title>About Me.</Title>
-
       <Wrapper>
         <AboutWrapper>
-          <BodyHeading>
+          <Heading>
             Let me tell you my <Span>story</Span>.
-          </BodyHeading>
+          </Heading>
           <BodyText>
             I am a self taught developer who enjoys building modern, clean, and
             accessible user interfaces for the web and iOS where the user
@@ -142,7 +144,7 @@ const About = () => {
           <BodyLinkWrapper>
             <BodyLink>
               <FontAwesomeIcon
-                icon={faPaperPlane}
+                icon={faFileWord}
                 style={{ marginRight: "0.5rem" }}
               />
               Resume
@@ -155,17 +157,20 @@ const About = () => {
               Projects
             </BodyLink>
           </BodyLinkWrapper>
-          <BodyHeading>
+          <Heading>
             The <Span>tech</Span> I like to use:
-          </BodyHeading>
+          </Heading>
           <SkillType>Web</SkillType>
           <SkillWrapper>
             <Skill>HTML -</Skill>
             <Skill>CSS -</Skill>
             <Skill>Javascript -</Skill>
             <Skill>React -</Skill>
+            <Skill>Gatsby -</Skill>
             <Skill>Node -</Skill>
-            <Skill>GraphQL</Skill>
+            <Skill>Sass -</Skill>
+            <Skill>GraphQL -</Skill>
+            <Skill>SQL</Skill>
           </SkillWrapper>
           <SkillType>Mobile</SkillType>
           <SkillWrapper>
@@ -176,6 +181,7 @@ const About = () => {
           <SkillWrapper>
             <Skill>Git -</Skill>
             <Skill>AWS -</Skill>
+            <Skill>Firebase -</Skill>
             <Skill>MySQL</Skill>
           </SkillWrapper>
         </AboutWrapper>

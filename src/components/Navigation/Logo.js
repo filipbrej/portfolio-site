@@ -11,6 +11,7 @@ const StyledLogo = styled(Link)`
   :hover {
     color: (30, 97, 197);
   }
+  margin-left: 1rem;
 `
 
 const Logo = () => {
