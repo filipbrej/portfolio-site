@@ -19,6 +19,10 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            siteUrl
+            social {
+              email
+            }
           }
         }
       }
@@ -32,8 +36,7 @@ function SEO({ description, lang, meta, title }) {
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={title || site.siteMetadata.title}
       meta={[
         {
           name: `description`,
@@ -42,6 +45,10 @@ function SEO({ description, lang, meta, title }) {
         {
           property: `og:title`,
           content: title,
+        },
+        {
+          property: `og:url`,
+          content: site.siteMetadata.siteUrl,
         },
         {
           property: `og:description`,
@@ -57,7 +64,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: `@${site.siteMetadata.author}`,
         },
         {
           name: `twitter:title`,
