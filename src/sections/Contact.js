@@ -47,7 +47,7 @@ const Form = styled.form`
   }
 
   @media (max-width: 768px) {
-    width: 70%;
+    width: 80%;
   }
 `
 
@@ -78,7 +78,7 @@ const Input = styled.input`
   resize: none;
   margin: 2rem 1rem 0 1rem;
   color: #333;
-  background-color: rgb(223, 223, 223);
+  border: 1.2px solid rgb(200, 200, 200);
   border-radius: 10px;
   display: block;
   transition: all 0.3s;
@@ -99,17 +99,11 @@ const MessageBox = styled.textarea`
   border: none;
   resize: none;
   color: #333;
-  background-color: rgb(223, 223, 223);
+  border: 1.2px solid rgb(200, 200, 200);
   margin: 2rem 0rem 1rem 0rem;
   border-radius: 10px;
   height: 200px;
   display: block;
-
-  :placeholder-shown + ${Label} {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-3rem);
-  }
 `
 
 const Reminder = styled.p`
@@ -128,7 +122,7 @@ const SubmitButton = styled.button`
   box-shadow: -5px 13px 35px -9px rgba(130, 130, 130, 0.5);
   color: white;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   padding: 0.5rem 1rem;
   border-radius: 20px;

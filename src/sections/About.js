@@ -23,6 +23,10 @@ const AboutWrapper = styled.div`
   justify-content: flex-start;
   margin-left: 2rem;
   margin-bottom: 5rem;
+
+  @media (max-width: 1700px) {
+    align-items: center;
+  }
 `
 
 const ArtImage = styled.img`
@@ -104,23 +108,31 @@ const Span = styled.span`
 // Skills Section
 const Skill = styled.h4`
   text-transform: uppercase;
-  color: #333;
   font-family: "Montserrat", sans-serif;
   margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
   font-weight: 600;
   font-size: 0.9rem;
+  background-color: rgb(223, 223, 223);
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
 `
 
 const SkillType = styled(Skill)`
   color: rgb(30, 97, 197);
   margin-bottom: 0.4rem;
   font-weight: 700;
+  background-color: transparent;
+  padding: 0;
 `
 
 const SkillWrapper = styled(BodyLinkWrapper)`
   margin-bottom: 1rem;
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: 1700px) {
+    justify-content: center;
+  }
 `
 
 const About = () => {
@@ -162,26 +174,27 @@ const About = () => {
           </Heading>
           <SkillType>Web</SkillType>
           <SkillWrapper>
-            <Skill>HTML -</Skill>
-            <Skill>CSS -</Skill>
-            <Skill>Javascript -</Skill>
-            <Skill>React -</Skill>
-            <Skill>Gatsby -</Skill>
-            <Skill>Node -</Skill>
-            <Skill>Sass -</Skill>
-            <Skill>GraphQL -</Skill>
+            <Skill>HTML</Skill>
+            <Skill>CSS</Skill>
+            <Skill>Javascript</Skill>
+            <Skill>React</Skill>
+            <Skill>Gatsby</Skill>
+            <Skill>Node</Skill>
+            <Skill>Sass</Skill>
+            <Skill>GraphQL</Skill>
             <Skill>SQL</Skill>
           </SkillWrapper>
           <SkillType>Mobile</SkillType>
           <SkillWrapper>
-            <Skill>Swift -</Skill>
+            <Skill>Swift</Skill>
+            <Skill>Objective-C</Skill>
             <Skill>Flutter</Skill>
           </SkillWrapper>
           <SkillType>Tools</SkillType>
           <SkillWrapper>
-            <Skill>Git -</Skill>
-            <Skill>AWS -</Skill>
-            <Skill>Firebase -</Skill>
+            <Skill>Git</Skill>
+            <Skill>AWS</Skill>
+            <Skill>Firebase</Skill>
             <Skill>MySQL</Skill>
           </SkillWrapper>
         </AboutWrapper>

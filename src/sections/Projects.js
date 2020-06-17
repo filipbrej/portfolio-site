@@ -17,7 +17,7 @@ const Wrapper = styled.section`
 `
 
 const GridWrapper = styled.div`
-  width: 80%;
+  width: 90%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 3rem;
@@ -86,6 +86,7 @@ const ProjectLink = styled.a`
   text-decoration: none;
   color: white;
   font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
   text-transform: uppercase;
   padding: 0.5rem 1rem;
   border-radius: 20px;
@@ -111,8 +112,11 @@ const SkillWrapper = styled(LinkWrapper)``
 const Skill = styled.h5`
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  font-weight: 400;
   margin-right: 0.3rem;
+  background-color: rgb(223, 223, 223);
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+  font-weight: 600;
 `
 
 const ProjectDescription = styled.p`
@@ -137,9 +141,6 @@ const FooterLink = styled.a`
   text-decoration: underline;
   cursor: pointer;
 `
-const Dash = styled(Skill)`
-  border: none;
-`
 
 const Projects = () => {
   return (
@@ -154,7 +155,6 @@ const Projects = () => {
           <ProjectName>Villain Cuts Website</ProjectName>
           <SkillWrapper>
             <Skill>React</Skill>
-            <Dash>-</Dash>
             <Skill>MaterialUI</Skill>
           </SkillWrapper>
           <LinkWrapper>
