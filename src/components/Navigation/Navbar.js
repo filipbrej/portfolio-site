@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import NavbarLinks from "./NavbarLinks"
 import Logo from "./Logo"
 import styled from "styled-components"
+import { useSpring, config, animated } from "react-spring"
 
 const Navigation = styled.nav`
   height: 8vh;
@@ -33,13 +34,13 @@ const Toggle = styled.div`
     display: flex;
   }
 `
-const LogoContainer = styled.div`
+const LogoContainer = styled(animated.div)`
   display: flex;
   height: 100%;
   align-items: center;
 `
 
-const LinkContainer = styled.div`
+const LinkContainer = styled(animated.div)`
   display: flex;
   height: 100%;
   justify-content: flex-end;
@@ -69,6 +70,7 @@ const Hamburger = styled.div`
   position: relative;
   transform: ${props => (props.open ? "rotate(-45deg)" : "inherit")};
 
+  /* Top and bottom of menu bar */
   ::before,
   ::after {
     width: 30px;
@@ -79,14 +81,14 @@ const Hamburger = styled.div`
     transition: all 0.3s linear;
   }
 
-  /* Top bar of icon */
+  /* Top bar of menu */
   ::before {
     transform: ${props =>
       props.open ? "rotate(-90deg) translate(-10px, 0px)" : "rotate(0deg)"};
     top: -10px;
   }
 
-  /* Bottom bar of icon */
+  /* Bottom bar of menu */
   ::after {
     opacity: ${props => (props.open ? "0" : "1")};
     transform: ${props => (props.open ? "rotate(90deg)" : "rotate(0deg)")};
@@ -97,9 +99,17 @@ const Hamburger = styled.div`
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
 
+  const NavSpring = useSpring({
+    config: config.wobbly,
+    delay: 100,
+    opacity: 1,
+    transform: "translateY(0rem)",
+    from: { opacity: 0, transform: "translateY(-1rem)" },
+  })
+
   return (
     <Navigation>
-      <LogoContainer>
+      <LogoContainer style={NavSpring}>
         <Logo />
       </LogoContainer>
       <Toggle
@@ -113,7 +123,7 @@ const Navbar = () => {
           <NavbarLinks />
         </LinkContainer>
       ) : (
-        <LinkContainer open>
+        <LinkContainer open style={NavSpring}>
           <NavbarLinks />
         </LinkContainer>
       )}

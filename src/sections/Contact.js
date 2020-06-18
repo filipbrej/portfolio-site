@@ -106,7 +106,7 @@ const MessageBox = styled.textarea`
   display: block;
 `
 
-const Reminder = styled.p`
+const RequiredIndicator = styled.p`
   font-family: "Montserrat", sans-serif;
   font-size: 0.8rem;
   color: #333;
@@ -146,21 +146,32 @@ const Contact = () => {
       <Heading>
         Let's work <Span>together</Span>.
       </Heading>
-      <Form>
+      <Form name="contact" method="POST" data-netlify="true">
         <FormGroup>
-          <Input required type="text" placeholder="Full Name*"></Input>
+          <Input
+            required
+            type="text"
+            name="name"
+            placeholder="Full Name*"
+          ></Input>
           <Label for="name">Full Name*</Label>
         </FormGroup>
         <FormGroup>
-          <Input required type="email" placeholder="Email Address*"></Input>
+          <Input
+            required
+            type="email"
+            name="email"
+            placeholder="Email Address*"
+          ></Input>
           <Label for="email">Email Address*</Label>
         </FormGroup>
         <FormGroup>
           <MessageBox
             required
+            name="message"
             placeholder="Enter your message here*"
           ></MessageBox>
-          <Reminder>*required field</Reminder>
+          <RequiredIndicator>*required field</RequiredIndicator>
         </FormGroup>
         <SubmitButton type="submit">
           <FontAwesomeIcon

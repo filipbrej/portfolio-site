@@ -60,7 +60,7 @@ const ProjectCard = styled.div`
   overflow: hidden;
   border-radius: 20px;
   box-shadow: -5px 13px 35px -9px rgba(130, 130, 130, 0.5);
-  min-height: 40vh;
+  min-height: 56vh;
   display: flex;
   flex-direction: column;
   border: 1px solid rgba(191, 191, 191, 0.5);
@@ -158,7 +158,7 @@ const Projects = () => {
             <Skill>MaterialUI</Skill>
           </SkillWrapper>
           <LinkWrapper>
-            <ProjectLink>
+            <ProjectLink href="https://www.villaincuts.com" target="_blank">
               <FontAwesomeIcon
                 icon={faExternalLinkAlt}
                 style={{ marginRight: "0.5rem" }}
@@ -188,7 +188,10 @@ const Projects = () => {
             <Skill>Swift</Skill>
           </SkillWrapper>
           <LinkWrapper>
-            <ProjectLink>
+            <ProjectLink
+              href="https://github.com/filipbrej/gh-followers"
+              target="_blank"
+            >
               <FontAwesomeIcon
                 icon={faGithub}
                 style={{ marginRight: "0.5rem" }}
@@ -211,7 +214,10 @@ const Projects = () => {
             <Skill>Swift</Skill>
           </SkillWrapper>
           <LinkWrapper>
-            <ProjectLink>
+            <ProjectLink
+              href="https://github.com/filipbrej/minutap"
+              target="_blank"
+            >
               <FontAwesomeIcon
                 icon={faGithub}
                 style={{ marginRight: "0.5rem" }}
@@ -233,7 +239,10 @@ const Projects = () => {
             <Skill>Swift</Skill>
           </SkillWrapper>
           <LinkWrapper>
-            <ProjectLink>
+            <ProjectLink
+              href="https://github.com/filipbrej/CHD"
+              target="_blank"
+            >
               <FontAwesomeIcon
                 icon={faGithub}
                 style={{ marginRight: "0.5rem" }}

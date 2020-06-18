@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import AboutDrawing from "../images/about.png"
+import AboutDrawing from "../images/about.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFileWord, faFolderOpen } from "@fortawesome/free-solid-svg-icons"
 
@@ -31,8 +31,9 @@ const AboutWrapper = styled.div`
 
 const ArtImage = styled.img`
   object-fit: cover;
-  min-height: 70%;
+  min-height: 50%;
   max-width: 70%;
+  margin-bottom: 5rem;
 `
 
 const Title = styled.h1`

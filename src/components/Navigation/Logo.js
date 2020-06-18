@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
+import { Link } from "react-scroll"
 
 const StyledLogo = styled(Link)`
   font-family: "Montserrat", sans-serif;
@@ -8,6 +8,7 @@ const StyledLogo = styled(Link)`
   text-decoration: none;
   color: black;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
   :hover {
     color: (30, 97, 197);
   }

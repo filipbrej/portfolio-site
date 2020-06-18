@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link } from "react-scroll"
 import styled from "styled-components"
 
 const NavItem = styled(Link)`
@@ -13,6 +13,7 @@ const NavItem = styled(Link)`
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 1.2rem;
+  cursor: pointer;
 
   :hover {
     color: rgb(30, 97, 197);
