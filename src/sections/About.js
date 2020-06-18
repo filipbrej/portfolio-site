@@ -84,13 +84,15 @@ const BodyLink = styled(Link)`
   border-radius: 20px;
   text-align: center;
   transition: all 0.2s ease-in-out;
-  margin-right: 0.5rem;
+  margin-right: 0.7rem;
 
   :hover {
-    :hover {
-      transform: translateY(-3px);
-      box-shadow: -5px 13px 35px -5px rgba(130, 130, 130, 0.5);
-    }
+    transform: translateY(-3px);
+    box-shadow: -5px 13px 35px -5px rgba(130, 130, 130, 0.5);
+  }
+
+  @media (max-width: 1700px) {
+    margin-bottom: 0.7rem;
   }
 `
 
@@ -98,6 +100,10 @@ const BodyLinkWrapper = styled.div`
   display: flex;
   flex-direction: row;
   margin-bottom: 8rem;
+
+  @media (max-width: 1700px) {
+    flex-direction: column;
+  }
 `
 
 const Span = styled.span`

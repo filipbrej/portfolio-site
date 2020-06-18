@@ -64,6 +64,10 @@ const ProjectCard = styled.div`
   display: flex;
   flex-direction: column;
   border: 1px solid rgba(191, 191, 191, 0.5);
+
+  @media (min-width: 1800px) {
+    min-height: 35vh;
+  }
 `
 const ProjectName = styled.h3`
   font-family: "Montserrat", sans-serif;
