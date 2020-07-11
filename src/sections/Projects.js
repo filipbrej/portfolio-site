@@ -134,7 +134,7 @@ const Footer = styled.h2`
   margin-top: 2rem;
   margin-bottom: 7rem;
   font-weight: 300;
-
+  text-align: center;
   @media (max-width: 786px) {
     font-size: 1.1rem;
   }

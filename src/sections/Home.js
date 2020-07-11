@@ -31,7 +31,7 @@ const TextWrapper = styled.div`
   @media (max-width: 768px) {
     align-items: center;
     margin-left: 0;
-    margin-bottom: 15rem;
+    /* margin-bottom: 15rem; */
   }
 `
 const Title = styled(animated.h1)`
@@ -63,6 +63,11 @@ const Subtitle = styled(animated.h2)`
   @media (max-width: 768px) {
     text-align: center;
     font-size: 1.2rem;
+  }
+
+  @media (max-width: 500px) {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 `
 

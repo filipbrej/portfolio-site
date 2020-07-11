@@ -147,7 +147,7 @@ const Contact = ({ id }) => {
         Let's work <Span>together</Span>.
       </Heading>
       <Form
-        action="#"
+        action="/success"
         name="contact"
         method="post"
         data-netlify="true"

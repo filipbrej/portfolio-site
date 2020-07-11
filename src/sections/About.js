@@ -27,6 +27,10 @@ const AboutWrapper = styled.div`
   @media (max-width: 1700px) {
     align-items: center;
   }
+
+  @media (max-width: 500px) {
+    margin-right: 1rem;
+  }
 `
 
 const ArtImage = styled.img`
@@ -57,6 +61,7 @@ const Heading = styled.h2`
 
   @media (max-width: 500px) {
     font-size: 1.6rem;
+    margin-right: 1rem;
   }
 `
 
@@ -67,6 +72,10 @@ const BodyText = styled.p`
   color: #333;
   margin-bottom: 1rem;
   max-width: 400px;
+
+  @media (max-width: 500px) {
+    margin-right: 1rem;
+  }
 `
 
 const BodyLink = styled.a`
