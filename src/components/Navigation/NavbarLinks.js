@@ -29,16 +29,22 @@ const NavItem = styled(Link)`
 const NavbarLinks = () => {
   return (
     <>
-      <NavItem to="home" smooth={true} spy={true}>
+      <NavItem to="home" smooth={true} spy={true} duration={500}>
         Home
       </NavItem>
-      <NavItem to="projects" smooth={true} spy={true} offset={-100}>
+      <NavItem
+        to="projects"
+        smooth={true}
+        spy={true}
+        offset={-100}
+        duration={500}
+      >
         Projects
       </NavItem>
-      <NavItem to="about" smooth={true} spy={true} offset={-200}>
+      <NavItem to="about" smooth={true} spy={true} offset={-200} duration={500}>
         About
       </NavItem>
-      <NavItem to="contact" smooth={true} spy={true}>
+      <NavItem to="contact" smooth={true} spy={true} duration={500}>
         Contact
       </NavItem>
     </>

@@ -180,7 +180,13 @@ const Home = ({ id }) => {
       </TextWrapper>
       <Link>
         <ScrollDown style={CaretSpring}>
-          <CaretDown>
+          <CaretDown
+            to="projects"
+            spy={true}
+            offset={-100}
+            smooth={true}
+            duration={500}
+          >
             <FontAwesomeIcon icon={faChevronDown} />
           </CaretDown>
         </ScrollDown>
