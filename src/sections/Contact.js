@@ -146,12 +146,15 @@ const Contact = ({ id }) => {
       <Heading>
         Let's work <Span>together</Span>.
       </Heading>
-      <Form action="" name="contact" method="POST" data-netlify="true">
-        <input
-          type="hidden"
-          name="form-name"
-          value="the-name-of-the-html-form"
-        />
+      <Form
+        action="#"
+        name="contact"
+        method="post"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+      >
+        <input type="hidden" name="bot-field" />
+        <input type="hidden" name="form-name" value="contact" />
         <FormGroup>
           <Input
             required
