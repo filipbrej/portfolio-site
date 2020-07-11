@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
 import AboutDrawing from "../images/about.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faFileWord, faFolderOpen } from "@fortawesome/free-solid-svg-icons"
+import { faFileWord } from "@fortawesome/free-solid-svg-icons"
+import Resume from "../static/Resume.pdf"
 
 const Wrapper = styled.section`
   width: 100%;
@@ -69,7 +69,7 @@ const BodyText = styled.p`
   max-width: 400px;
 `
 
-const BodyLink = styled(Link)`
+const BodyLink = styled.a`
   background: linear-gradient(
     45deg,
     rgba(0, 58, 112, 1) 0%,
@@ -99,11 +99,7 @@ const BodyLink = styled(Link)`
 const BodyLinkWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  margin-bottom: 8rem;
-
-  @media (max-width: 1700px) {
-    flex-direction: column;
-  }
+  margin-bottom: 5rem;
 `
 
 const Span = styled.span`
@@ -163,19 +159,12 @@ const About = ({ id }) => {
             applications using Swift.
           </BodyText>
           <BodyLinkWrapper>
-            <BodyLink>
+            <BodyLink href={Resume} target="_blank">
               <FontAwesomeIcon
                 icon={faFileWord}
                 style={{ marginRight: "0.5rem" }}
               />
-              Resume
-            </BodyLink>
-            <BodyLink>
-              <FontAwesomeIcon
-                icon={faFolderOpen}
-                style={{ marginRight: "0.5rem" }}
-              />
-              Projects
+              View Resume
             </BodyLink>
           </BodyLinkWrapper>
           <Heading>

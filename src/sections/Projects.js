@@ -61,7 +61,7 @@ const ProjectCard = styled.div`
   overflow: hidden;
   border-radius: 20px;
   box-shadow: -5px 13px 35px -9px rgba(130, 130, 130, 0.5);
-  min-height: 56vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   border: 1px solid rgba(191, 191, 191, 0.5);
