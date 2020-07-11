@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "react-scroll"
+import { Link, animateScroll as scroll } from "react-scroll"
 import styled from "styled-components"
 
 const NavItem = styled(Link)`
@@ -29,10 +29,18 @@ const NavItem = styled(Link)`
 const NavbarLinks = () => {
   return (
     <>
-      <NavItem to="/">About</NavItem>
-      <NavItem to="/">Skills</NavItem>
-      <NavItem to="/">Projects</NavItem>
-      <NavItem to="/">Contact</NavItem>
+      <NavItem to="home" smooth={true} spy={true}>
+        Home
+      </NavItem>
+      <NavItem to="projects" smooth={true} spy={true} offset={-100}>
+        Projects
+      </NavItem>
+      <NavItem to="about" smooth={true} spy={true} offset={-200}>
+        About
+      </NavItem>
+      <NavItem to="contact" smooth={true} spy={true}>
+        Contact
+      </NavItem>
     </>
   )
 }

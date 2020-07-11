@@ -117,7 +117,7 @@ const ScrollDown = styled(animated.div)`
   cursor: pointer;
 `
 
-const Home = () => {
+const Home = ({ id }) => {
   // Animation for title
   const TitleSpring = useSpring({
     config: config.wobbly,
@@ -155,7 +155,7 @@ const Home = () => {
   })
 
   return (
-    <Wrapper>
+    <Wrapper id={id}>
       <TextWrapper>
         <Title style={TitleSpring}>
           Hello! 👋🏼 <br /> I'm <TitleSpan>Fil.</TitleSpan>

@@ -139,14 +139,19 @@ const SubmitButton = styled.button`
   }
 `
 
-const Contact = () => {
+const Contact = ({ id }) => {
   return (
-    <>
+    <div id={id}>
       <Title>Contact.</Title>
       <Heading>
         Let's work <Span>together</Span>.
       </Heading>
-      <Form name="contact" method="POST" data-netlify="true">
+      <Form action="" name="contact" method="POST" data-netlify="true">
+        <input
+          type="hidden"
+          name="form-name"
+          value="the-name-of-the-html-form"
+        />
         <FormGroup>
           <Input
             required
@@ -181,7 +186,7 @@ const Contact = () => {
           Submit
         </SubmitButton>
       </Form>
-    </>
+    </div>
   )
 }
 

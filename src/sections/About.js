@@ -137,16 +137,18 @@ const SkillWrapper = styled(BodyLinkWrapper)`
   margin-bottom: 1rem;
   display: flex;
   flex-wrap: wrap;
+
   @media (max-width: 1700px) {
     justify-content: center;
+    flex-direction: row;
   }
 `
 
-const About = () => {
+const About = ({ id }) => {
   return (
     <>
       <Title>About Me.</Title>
-      <Wrapper>
+      <Wrapper id={id}>
         <AboutWrapper>
           <Heading>
             Let me tell you my <Span>story</Span>.

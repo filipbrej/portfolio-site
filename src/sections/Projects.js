@@ -9,6 +9,7 @@ import VillainCuts from "../images/projects/villain-cuts.jpg"
 import GitHubFollowers from "../images/projects/github-follower.jpg"
 import Minutap from "../images/projects/minutap-app.jpg"
 import CHD from "../images/projects/CHD.jpg"
+import BreakingBad from "../images/projects/breaking-bad.jpg"
 
 const Wrapper = styled.section`
   display: flex;
@@ -146,9 +147,9 @@ const FooterLink = styled.a`
   cursor: pointer;
 `
 
-const Projects = () => {
+const Projects = ({ id }) => {
   return (
-    <Wrapper>
+    <Wrapper id={id}>
       <Title>Projects.</Title>
       <Heading>
         Here's what I've been <Span>working</Span> on.
@@ -181,8 +182,44 @@ const Projects = () => {
             A website for a small business built with React where users can
             contact the hair stylist for an appointment and learn more about the
             business. MaterialUI, a React design library, was used to give the
-            website a consistent, attractive theme. Netlify was used for hosting
-            and handling the contact form submissions.
+            website a consistent, attractive theme.
+          </ProjectDescription>
+        </ProjectCard>
+        <ProjectCard>
+          <ProjectImage src={BreakingBad} />
+          <ProjectName>Breaking Bad Character Viewer</ProjectName>
+          <SkillWrapper>
+            <Skill>React</Skill>
+            <Skill>Styled-Components</Skill>
+          </SkillWrapper>
+          <LinkWrapper>
+            <ProjectLink
+              href="https://breaking-bad-cast-viewer.netlify.app/"
+              target="_blank"
+            >
+              <FontAwesomeIcon
+                icon={faExternalLinkAlt}
+                style={{ marginRight: "0.5rem" }}
+              />
+              Demo
+            </ProjectLink>
+            <ProjectLink
+              href="https://github.com/filipbrej/breaking-bad-react"
+              target="_blank"
+            >
+              <FontAwesomeIcon
+                icon={faGithub}
+                style={{ marginRight: "0.5rem" }}
+              />
+              Source Code
+            </ProjectLink>
+          </LinkWrapper>
+          <ProjectDescription>
+            A website where you can view the characters from the show Breaking
+            Bad and see each of their information such as the actor they're
+            portrayed by, birthday, and nickname. The app uses the Breaking Bad
+            API to fetch information and the styled-components package was used
+            to style the app.
           </ProjectDescription>
         </ProjectCard>
         <ProjectCard>
@@ -232,8 +269,8 @@ const Projects = () => {
           <ProjectDescription>
             An iOS game built using Swift. Users press a button as many times as
             they can in a minute and try to achieve a high score. The UI was
-            built programmatically and UserDefaults is used to keep track of the
-            high score.
+            built programmatically with Swift. UserDefaults was used to keep
+            track of the high score even when the user exited the app.
           </ProjectDescription>
         </ProjectCard>
         <ProjectCard>
