@@ -18,7 +18,9 @@ const StyledLogo = styled(Link)`
 const Logo = () => {
   return (
     <>
-      <StyledLogo>Filip Brej</StyledLogo>
+      <StyledLogo to="home" smooth={true} spy={true} duration={500}>
+        Filip Brej
+      </StyledLogo>
     </>
   )
 }
