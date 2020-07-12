@@ -31,7 +31,6 @@ const TextWrapper = styled.div`
   @media (max-width: 768px) {
     align-items: center;
     margin-left: 0;
-    /* margin-bottom: 15rem; */
   }
 `
 const Title = styled(animated.h1)`
@@ -120,6 +119,10 @@ const ScrollDown = styled(animated.div)`
   align-items: center;
   bottom: 50px;
   cursor: pointer;
+
+  @media (max-width: 500px) {
+    visibility: hidden;
+  }
 `
 
 const Home = ({ id }) => {

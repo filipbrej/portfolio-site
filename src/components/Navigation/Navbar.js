@@ -1,8 +1,9 @@
 import React, { useState } from "react"
-import NavbarLinks from "./NavbarLinks"
+// import NavbarLinks from "./NavbarLinks"
 import Logo from "./Logo"
 import styled from "styled-components"
 import { useSpring, config, animated } from "react-spring"
+import { Link } from "react-scroll"
 
 const Navigation = styled.nav`
   height: 8vh;
@@ -56,7 +57,7 @@ const LinkContainer = styled(animated.div)`
     opacity: 1;
     transition: all 0.3s ease-in;
     top: 8vh;
-    left: ${props => (props.open ? "-100%" : "0%")};
+    left: ${({ open }) => (open ? "-100%" : "0%")};
   }
 `
 
@@ -68,7 +69,7 @@ const Hamburger = styled.div`
   transition: all 0.3s linear;
   align-self: center;
   position: relative;
-  transform: ${props => (props.open ? "rotate(-45deg)" : "inherit")};
+  transform: ${({ open }) => (open ? "rotate(-45deg)" : "inherit")};
 
   /* Top and bottom of menu bar */
   ::before,
@@ -83,22 +84,47 @@ const Hamburger = styled.div`
 
   /* Top bar of menu */
   ::before {
-    transform: ${props =>
-      props.open ? "rotate(-90deg) translate(-10px, 0px)" : "rotate(0deg)"};
+    transform: ${({ open }) =>
+      open ? "rotate(-90deg) translate(-10px, 0px)" : "rotate(0deg)"};
     top: -10px;
   }
 
   /* Bottom bar of menu */
   ::after {
-    opacity: ${props => (props.open ? "0" : "1")};
-    transform: ${props => (props.open ? "rotate(90deg)" : "rotate(0deg)")};
+    opacity: ${({ open }) => (open ? "0" : "1")};
+    transform: ${({ open }) => (open ? "rotate(90deg)" : "rotate(0deg)")};
     top: 10px;
+  }
+`
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: #444;
+  display: inline-block;
+  white-space: nowrap;
+  margin: 0 1vw;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  cursor: pointer;
+
+  :hover {
+    color: rgb(30, 97, 197);
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px 0;
+    font-size: 1.5rem;
+    z-index: 5;
   }
 `
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
 
+  // Animation for navbar
   const NavSpring = useSpring({
     config: config.wobbly,
     delay: 100,
@@ -118,13 +144,74 @@ const Navbar = () => {
       >
         {navbarOpen ? <Hamburger open /> : <Hamburger />}
       </Toggle>
+
       {navbarOpen ? (
         <LinkContainer>
-          <NavbarLinks />
+          <StyledLink
+            to="home"
+            spy={true}
+            smooth={true}
+            duration={500}
+            onClick={() => setNavbarOpen(!navbarOpen)}
+          >
+            Home
+          </StyledLink>
+          <StyledLink
+            to="projects"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-100}
+            onClick={() => setNavbarOpen(!navbarOpen)}
+          >
+            Projects
+          </StyledLink>
+          <StyledLink
+            to="about"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-200}
+            onClick={() => setNavbarOpen(!navbarOpen)}
+          >
+            About
+          </StyledLink>
+          <StyledLink
+            to="contact"
+            spy={true}
+            smooth={true}
+            duration={500}
+            onClick={() => setNavbarOpen(!navbarOpen)}
+          >
+            Contact
+          </StyledLink>
         </LinkContainer>
       ) : (
         <LinkContainer open style={NavSpring}>
-          <NavbarLinks />
+          <StyledLink to="home" spy={true} smooth={true} duration={500}>
+            Home
+          </StyledLink>
+          <StyledLink
+            to="projects"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-100}
+          >
+            Projects
+          </StyledLink>
+          <StyledLink
+            to="about"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-200}
+          >
+            About
+          </StyledLink>
+          <StyledLink to="contact" spy={true} smooth={true} duration={500}>
+            Contact
+          </StyledLink>
         </LinkContainer>
       )}
     </Navigation>
