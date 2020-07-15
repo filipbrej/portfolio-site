@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { animated, config } from "react-spring"
 
 const Wrapper = styled.div`
   display: flex;

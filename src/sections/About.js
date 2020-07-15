@@ -195,14 +195,13 @@ const About = ({ id }) => {
           <SkillWrapper>
             <Skill>Swift</Skill>
             <Skill>Objective-C</Skill>
-            <Skill>Flutter</Skill>
           </SkillWrapper>
           <SkillType>Tools</SkillType>
           <SkillWrapper>
             <Skill>Git</Skill>
             <Skill>AWS</Skill>
             <Skill>Firebase</Skill>
-            <Skill>MySQL</Skill>
+            <Skill>PostgreSQL</Skill>
           </SkillWrapper>
         </AboutWrapper>
         <ArtImage src={AboutDrawing}></ArtImage>
