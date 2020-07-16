@@ -61,13 +61,13 @@ const ProjectCard = styled.div`
   overflow: hidden;
   border-radius: 20px;
   box-shadow: -5px 13px 35px -9px rgba(130, 130, 130, 0.5);
-  min-height: 50vh;
+  min-height: 55vh;
   display: flex;
   flex-direction: column;
   border: 1px solid rgba(191, 191, 191, 0.5);
 
   @media (min-width: 1800px) {
-    min-height: 35vh;
+    min-height: 40vh;
   }
 `
 const ProjectName = styled.h3`
@@ -186,6 +186,33 @@ const Projects = ({ id }) => {
           </ProjectDescription>
         </ProjectCard>
         <ProjectCard>
+          <ProjectImage src={CHD} />
+          <ProjectName>Intertek Choking Hazard Form</ProjectName>
+          <SkillWrapper>
+            <Skill>Swift</Skill>
+          </SkillWrapper>
+          <LinkWrapper>
+            <ProjectLink
+              href="https://github.com/filipbrej/CHD"
+              target="_blank"
+            >
+              <FontAwesomeIcon
+                icon={faGithub}
+                style={{ marginRight: "0.5rem" }}
+              />
+              Source Code
+            </ProjectLink>
+          </LinkWrapper>
+          <ProjectDescription>
+            An iOS application I built during my time as a safety engineer at
+            Intertek, allowing medical professionals to log injury data from
+            patients and consumer products they used. I designed the initial UI
+            of the app and implemented the camera feature and speech-to-text
+            conversion using the iOS Speech API.
+          </ProjectDescription>
+        </ProjectCard>
+
+        <ProjectCard>
           <ProjectImage src={BreakingBad} />
           <ProjectName>Breaking Bad Character Viewer</ProjectName>
           <SkillWrapper>
@@ -271,32 +298,6 @@ const Projects = ({ id }) => {
             they can in a minute and try to achieve a high score. The UI was
             built programmatically with Swift. UserDefaults was used to keep
             track of the high score even when the user exited the app.
-          </ProjectDescription>
-        </ProjectCard>
-        <ProjectCard>
-          <ProjectImage src={CHD} />
-          <ProjectName>Intertek Choking Hazard Form</ProjectName>
-          <SkillWrapper>
-            <Skill>Swift</Skill>
-          </SkillWrapper>
-          <LinkWrapper>
-            <ProjectLink
-              href="https://github.com/filipbrej/CHD"
-              target="_blank"
-            >
-              <FontAwesomeIcon
-                icon={faGithub}
-                style={{ marginRight: "0.5rem" }}
-              />
-              Source Code
-            </ProjectLink>
-          </LinkWrapper>
-          <ProjectDescription>
-            An iOS application built for medical professionals to log incidents
-            with consumer products involving children. I designed the initial UI
-            in Xcode using UIKit to streamline the user experience, and
-            implemented the camera feature and speech-to-text conversion using
-            Apple's Speech API.
           </ProjectDescription>
         </ProjectCard>
       </GridWrapper>

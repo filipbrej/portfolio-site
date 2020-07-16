@@ -31,12 +31,14 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <GlobalStyle />
-      <Header />
-      <Home id="home" />
-      <Projects id="projects" />
-      <About id="about" />
-      <Contact id="contact" />
+      <main>
+        <GlobalStyle />
+        <Header />
+        <Home id="home" />
+        <Projects id="projects" />
+        <About id="about" />
+        <Contact id="contact" />
+      </main>
     </>
   )
 }

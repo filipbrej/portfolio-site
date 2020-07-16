@@ -159,13 +159,12 @@ const About = ({ id }) => {
             Let me tell you my <Span>story</Span>.
           </Heading>
           <BodyText>
-            I am a self taught developer who enjoys building modern, clean, and
-            accessible user interfaces for the web and iOS where the user
-            experience is a priority.
+            I am a software developer who enjoys building modern, clean, and
+            accessible user interfaces for the web and iOS.
             <br />
             <br />I have experience creating websites for small businesses using
             modern web technologies such as React, as well as creating iOS
-            applications using Swift.
+            applications using Swift at larger companies.
           </BodyText>
           <BodyLinkWrapper>
             <BodyLink href={Resume} target="_blank">
