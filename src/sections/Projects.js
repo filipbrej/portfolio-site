@@ -204,14 +204,13 @@ const Projects = ({ id }) => {
             </ProjectLink>
           </LinkWrapper>
           <ProjectDescription>
-            An iOS application I built during my time as a safety engineer at
-            Intertek, allowing medical professionals to log injury data from
-            patients and consumer products they used. I designed the initial UI
-            of the app and implemented the camera feature and speech-to-text
-            conversion using the iOS Speech API.
+            An iOS application I helped develop during my time at Intertek,
+            allowing medical professionals to log injury data from patients and
+            consumer products they used. I designed the initial UI of the app
+            and implemented the camera feature and speech-to-text conversion
+            using the iOS Speech API.
           </ProjectDescription>
         </ProjectCard>
-
         <ProjectCard>
           <ProjectImage src={BreakingBad} />
           <ProjectName>Breaking Bad Character Viewer</ProjectName>
@@ -269,10 +268,11 @@ const Projects = ({ id }) => {
           </LinkWrapper>
           <ProjectDescription>
             An iOS application built using Swift as part of an iOS course by
-            Sean Allen. The app allows the user to seach a GitHub account's
-            follower list and get more information about the follower such as
-            the amount of repositories, their follower list, and go to their
-            profile. The app uses the GitHub API to fetch user data.
+            Sean Allen that I took to improve my skills. The app allows the user
+            to seach a GitHub account's follower list and get more information
+            about the follower such as the amount of repositories, their
+            follower list, and go to their profile. The app uses the GitHub API
+            to fetch user data.
           </ProjectDescription>
         </ProjectCard>
         <ProjectCard>
@@ -296,8 +296,9 @@ const Projects = ({ id }) => {
           <ProjectDescription>
             An iOS game built using Swift. Users press a button as many times as
             they can in a minute and try to achieve a high score. The UI was
-            built programmatically with Swift. UserDefaults was used to keep
-            track of the high score even when the user exited the app.
+            built programmatically with Swift following the MVC architecture.
+            UserDefaults was used to keep track of the high score even when the
+            user exited the app.
           </ProjectDescription>
         </ProjectCard>
       </GridWrapper>
