@@ -141,9 +141,9 @@ const Footer = styled.h2`
 `
 
 const FooterLink = styled.a`
-  font-weight: 500;
+  font-weight: 600;
   color: rgb(30, 97, 197);
-  text-decoration: underline;
+  text-decoration: none;
   cursor: pointer;
 `
 
