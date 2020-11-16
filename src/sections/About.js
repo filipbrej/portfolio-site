@@ -160,7 +160,7 @@ const About = ({ id }) => {
           </Heading>
           <BodyText>
             I am a software developer who enjoys building modern, clean, and
-            accessible user interfaces for the web and iOS.
+            accessible applications for the web and iOS.
             <br />
             <br />I have experience creating websites for small businesses using
             modern web technologies such as React, as well as creating iOS
