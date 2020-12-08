@@ -18,7 +18,7 @@ const words = [
 ]
 
 const Wrapper = styled.div`
-  font-weight: 600;
+  font-weight: bold;
   font-style: italic;
   color: rgb(30, 97, 197);
   width: 132px;
