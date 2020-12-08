@@ -193,7 +193,7 @@ const About = ({ id }) => {
           <SkillType>Mobile</SkillType>
           <SkillWrapper>
             <Skill>Swift</Skill>
-            <Skill>Objective-C</Skill>
+            <Skill>React Native</Skill>
           </SkillWrapper>
           <SkillType>Tools</SkillType>
           <SkillWrapper>

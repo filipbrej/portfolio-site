@@ -212,43 +212,6 @@ const Projects = ({ id }) => {
           </ProjectDescription>
         </ProjectCard>
         <ProjectCard>
-          <ProjectImage src={BreakingBad} />
-          <ProjectName>Breaking Bad Character Viewer</ProjectName>
-          <SkillWrapper>
-            <Skill>React</Skill>
-            <Skill>Styled-Components</Skill>
-          </SkillWrapper>
-          <LinkWrapper>
-            <ProjectLink
-              href="https://breaking-bad-cast-viewer.netlify.app/"
-              target="_blank"
-            >
-              <FontAwesomeIcon
-                icon={faExternalLinkAlt}
-                style={{ marginRight: "0.5rem" }}
-              />
-              Demo
-            </ProjectLink>
-            <ProjectLink
-              href="https://github.com/filipbrej/breaking-bad-react"
-              target="_blank"
-            >
-              <FontAwesomeIcon
-                icon={faGithub}
-                style={{ marginRight: "0.5rem" }}
-              />
-              Source Code
-            </ProjectLink>
-          </LinkWrapper>
-          <ProjectDescription>
-            A website where you can view the characters from the show Breaking
-            Bad and see each of their information such as the actor they're
-            portrayed by, birthday, and nickname. The app uses the Breaking Bad
-            API to fetch information and the styled-components package was used
-            to style the app.
-          </ProjectDescription>
-        </ProjectCard>
-        <ProjectCard>
           <ProjectImage src={GitHubFollowers} />
           <ProjectName>GitHub Followers</ProjectName>
           <SkillWrapper>
