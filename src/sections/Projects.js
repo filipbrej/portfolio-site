@@ -9,7 +9,6 @@ import VillainCuts from "../images/projects/villain-cuts.jpg"
 import GitHubFollowers from "../images/projects/github-follower.jpg"
 import Minutap from "../images/projects/minutap-app.jpg"
 import CHD from "../images/projects/CHD.jpg"
-import BreakingBad from "../images/projects/breaking-bad.jpg"
 
 const Wrapper = styled.section`
   display: flex;

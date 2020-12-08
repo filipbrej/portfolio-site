@@ -70,12 +70,6 @@ const Subtitle = styled(animated.h2)`
   }
 `
 
-const SubtitleSpan = styled.span`
-  font-style: italic;
-  font-weight: 600;
-  color: rgb(30, 97, 197);
-`
-
 const LinkWrapper = styled(animated.div)`
   display: flex;
   flex-direction: row;

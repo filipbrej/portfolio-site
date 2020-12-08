@@ -14,27 +14,35 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Montserrat`,
-            variants: [
-              `100`,
-              `300i`,
-              `300`,
-              `400i`,
-              `400`,
-              `600i`,
-              `600`,
-              `700i`,
-              `700`,
-              `800`,
-            ],
-          },
-        ],
-      },
+          `Montserrat\:100, 300i, 300, 400i, 400, 600i, 600, 700i, 700, 800`,
+        ]
+      }
     },
+    // {
+    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
+    //   options: {
+    //     fonts: [
+    //       {
+    //         family: `Montserrat`,
+    //         variants: [
+    //           `100`,
+    //           `300i`,
+    //           `300`,
+    //           `400i`,
+    //           `400`,
+    //           `600i`,
+    //           `600`,
+    //           `700i`,
+    //           `700`,
+    //           `800`,
+    //         ],
+    //       },
+    //     ],
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
