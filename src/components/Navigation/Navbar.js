@@ -106,7 +106,7 @@ const StyledLink = styled(Link)`
   transition: all 0.2s ease-in-out;
   position: relative;
   font-family: "Montserrat", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.2rem;
   cursor: pointer;
 

@@ -83,7 +83,7 @@ const PageLink = styled.a`
     rgba(89, 160, 235, 1) 100%
   );
   box-shadow: -5px 13px 35px -9px rgba(130, 130, 130, 0.5);
-  border-radius: 70px;
+  border-radius: 50px;
   text-decoration: none;
   color: #fff;
   font-size: 3rem;

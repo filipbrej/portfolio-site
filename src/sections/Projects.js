@@ -159,7 +159,7 @@ const Projects = ({ id }) => {
           <ProjectName>Villain Cuts Website</ProjectName>
           <SkillWrapper>
             <Skill>React</Skill>
-            <Skill>MaterialUI</Skill>
+            <Skill>Gatsby</Skill>
           </SkillWrapper>
           <LinkWrapper>
             <ProjectLink href="https://www.villaincuts.com" target="_blank">
